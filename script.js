@@ -4,6 +4,5 @@ document.getElementById("ug").textContent = "Welcome, " + Name;
 
 
 function nextpage(){
-window.location.href = "login.html";
-
+window.location.href = "chal.html";
 }
