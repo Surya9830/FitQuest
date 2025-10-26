@@ -1,0 +1,131 @@
+*{
+    border: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.slider img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition:1.5s, ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;                /* visible */
+}
+
+.slider{
+    position: fixed;
+    z-index: -2;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+}
+
+.ovrl{
+     position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.815); /* black with 60% opacity */
+      z-index: -1;
+}
+
+
+#pbody{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    position: fixed;       /* make it stay centered on screen */
+  top: 50%;              /* move to the middle vertically */
+  left: 50%;             /* move to the middle horizontally */
+  transform: translate(-50%, -50%); /* perfect centering */
+
+}
+
+#pbody button{
+    font-size: 25px;
+    color: white;
+    background-color: #088CFF;
+    width: auto;
+    padding: 15px;
+    height: 65px;
+    border-radius: 10px;
+}
+
+#pbody span{font-size: 78px;
+    font-family: Inter;
+
+}
+
+
+#timer{
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    font-family: inter;
+    font-weight: bolder;
+}
+
+
+.txt{
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    font-size: 35px;
+    font-family: Inter;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+/* ////extra */
+
+
+@media screen and (max-width: 768px) {
+  #timer {
+    width: 100%;
+    text-align: center;
+    font-weight:normal;
+    font-size: 50px; /* smaller on tablet/mobile */
+  }
+  
+  #pbody span{
+    font-size: 45px;
+
+  }
+
+  #pbody {
+    top: 50%; /* move text slightly higher on smaller screens */
+  }
+
+  .txt{
+    width: 100%;
+
+    font-size:35px;
+  }
+
+  #pbody button {
+    padding: 6px 15px;
+  }
+}
